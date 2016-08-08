@@ -1,0 +1,80 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Offer</h1>
+
+<f:flashMessages />
+
+		tx_abewooffer_domain_model_offer.name"
+		tx_abewooffer_domain_model_offer.street"
+		tx_abewooffer_domain_model_offer.description"
+		tx_abewooffer_domain_model_offer.maplink"
+			{offer : offer}"> {offer.name}
+			{offer : offer}"> {offer.street}
+			{offer : offer}"> {offer.description}
+			{offer : offer}"> {offer.maplink}
+
+	<f:for each="{offers}" as="offer">
+		<div class="row abewooffer">
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3>{offer.name}</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<f:format.html>{offer.description}</f:format.html>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<a href="{offer.image.originalResource.publicUrl}" title="{offer.image.originalResource.title}" data-rel="lightcase" class="thumbnail img-responsive">
+								<img src="{offer.image.originalResource.publicUrl}" />
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<a class="pdflink" href="{house.documentation.originalResource.publicUrl}">
+								<div class="pdfcontainer nopadding">
+									<span class="pdflogo">PDF</span>
+									<f:if condition='{house.documentation.originalResource.description}'>
+										<f:then>
+											{house.documentation.originalResource.description}
+										</f:then>
+										<f:else>
+											<f:translate key="tx_abewooffer_domain_model_offer.noDocumentation"/>
+										</f:else>
+									</f:if>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</f:for>
+
+
+</f:section>

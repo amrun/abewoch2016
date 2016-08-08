@@ -1,0 +1,53 @@
+
+<table class="tx-abewooffer" >
+	<tr>
+		<td>
+			<f:translate key="tx_abewooffer_domain_model_offer.name" />
+		</td>
+		<td>
+		{offer.name}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_abewooffer_domain_model_offer.street" />
+		</td>
+		<td>
+		{offer.street}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_abewooffer_domain_model_offer.maplink" />
+		</td>
+		<td>
+		{offer.maplink}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_abewooffer_domain_model_offer.description" />
+		</td>
+		<td>
+		{offer.description}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_abewooffer_domain_model_offer.image" />
+		</td>
+		<td>
+				<f:image src="{offer.image.originalResource.publicUrl}" width="200"/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_abewooffer_domain_model_offer.documentation" />
+		</td>
+		<td>
+				<a href="{offer.documentation.originalResource.publicUrl}">
+					{offer.documentation.originalResource.name}
+				</a>
+		</td>
+	</tr>
+</table>

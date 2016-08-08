@@ -1,0 +1,67 @@
+plugin.tx_abewoch.view {
+    templateRootPath = EXT:abewoch/Resources/Private/Templates/
+    partialRootPath = EXT:abewoch/Resources/Private/Partials/
+    layoutRootPath = EXT:abewoch/Resources/Private/Layouts/
+}
+
+plugin.tx_news {
+        view {
+        		templateRootPaths >
+                templateRootPaths {
+                	0 = EXT:abewoch/Resources/Private/Templates/News/
+                }
+                partialRootPaths >
+                partialRootPaths {
+                	0 = EXT:abewoch/Resources/Private/Partials/News/
+                }
+                layoutRootPaths >
+                layoutRootPaths {
+                	0 = EXT:abewoch/Resources/Private/Layouts/News/
+                }
+        }
+}
+
+plugin.tx_vhs.settings.asset {
+
+    jquery {
+        name = jquery
+        path = EXT:abewoch/Resources/Public/JS/jquery-1.12.3.min.js
+    }
+
+    lightcaseJS {
+        name = lightcaseJS
+        path = EXT:abewoch/Resources/Public/JS/lightcase.js
+    }
+
+    bootstrapCSS {
+    	name = bootstrapCSS
+    	path = EXT:abewoch/Resources/Public/bootstrap-3.3.6-dist/css/bootstrap.min.css
+    }
+    #bootstrapResponsiveCSS {
+    #	name = bootstrapResponsiveCSS
+    #	path = EXT:abewoch/Resources/Public/bootstrap-3.3.6-dist/css/bootstrap-responsive.min.css
+    #}
+
+
+
+    lightcaseCSS {
+        name = lightcaseCSS
+        path = EXT:abewoch/Resources/Public/CSS/lightcase.css
+    }
+
+    styles {
+        name = styles
+        path = EXT:abewoch/Resources/Public/CSS/style.css
+    }
+
+    script {
+        name = script
+        path = EXT:abewoch/Resources/Public/JS/script.js
+    }
+
+    bootstrapJS {
+    	name = bootstrapJS
+    	path = EXT:abewoch/Resources/Public/bootstrap-3.3.6-dist/js/bootstrap.js
+    }
+
+}

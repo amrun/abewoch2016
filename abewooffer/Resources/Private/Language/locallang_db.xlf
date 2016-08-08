@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-03T14:52:47Z" product-name="abewooffer">
+		<header/>
+		<body>
+			<trans-unit id="tx_abewooffer_domain_model_offer">
+				<source>Offer</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.maplink">
+				<source>Maplink</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.documentation">
+				<source>Documentation</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_locality">
+				<source>Locality</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_locality.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_locality.zip">
+				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_locality.canton">
+				<source>Canton</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_locality.tabs.media">
+				<source>Canton</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

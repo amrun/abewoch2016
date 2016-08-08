@@ -1,0 +1,15 @@
+
+plugin.tx_abewohousetypes_houselist {
+	view {
+		# cat=plugin.tx_abewohousetypes_houselist/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:abewohousetypes/Resources/Private/Templates/
+		# cat=plugin.tx_abewohousetypes_houselist/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:abewohousetypes/Resources/Private/Partials/
+		# cat=plugin.tx_abewohousetypes_houselist/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:abewohousetypes/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_abewohousetypes_houselist//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

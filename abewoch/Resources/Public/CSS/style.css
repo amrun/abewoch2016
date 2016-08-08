@@ -1,0 +1,316 @@
+/**
+ * Created by bberger on 22.04.2016.
+ */
+:root {
+	--nav-height: 50px;
+	--abewo-red: #ac0000;
+}
+
+* {
+	color: #333;
+
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border-radius: 0 !important;
+}
+
+a {
+	color: var(--abewo-red);
+}
+
+a:hover {
+	color: var(--abewo-red);
+	text-decoration: underline;
+}
+
+html,
+body {
+	min-height: 100%;
+	height: 100%;
+	background-image: url('/typo3conf/ext/abewoch/Resources/Public/inflicted-red.png');
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--abewo-red);
+}
+
+h1 {
+}
+
+h2 {
+	color: #333;
+	/*background-color: #e9e9e9;*/
+	padding: 10px 10px 3px 10px;
+	border-bottom: 1px solid #ac0000;
+}
+
+h3 {
+	text-transform: lowercase;
+}
+
+ul {
+	padding-left: 17px;
+}
+
+ul li {
+	margin-bottom: 3px;
+}
+
+div.headerimage img {
+	width: 100%;
+	margin-top: 5px;
+}
+
+.jumbotron.banner {
+	margin: 0;
+}
+
+img.banner {
+	max-height: 100px;
+	margin: 0 auto;
+}
+
+.navbar-brand > img {
+	max-height: 30px;
+	background: white;
+}
+
+div.container.content {
+	min-height: 100%;
+}
+
+/* content elements */
+div.container.content > div.row > div.col-md-12 > div {
+	background-color: #fff;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+/* inner div of content elements */
+div.container.content > div.row > div.col-md-12 > div > div {
+	padding: 10px;
+}
+
+div.container.content > div.row > div.col-md-12 > div > div div.row {
+	padding: 0;
+	margin: 0;
+}
+
+div.container.banner {
+	background-color: #fff;
+	padding: 30px 0;
+}
+
+.navbar {
+	background-color: transparent;
+}
+
+.navbar-brand {
+	padding: 10px;
+}
+
+nav.mainnavigationcontainer > .container {
+	/*border: 1px solid var(--abewo-red);*/
+	border-top: 1px dashed;
+	background-color: #fff;
+}
+
+nav.mainnavigationcontainer {
+	margin-bottom: 0;
+	border: none;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+nav.mainnavigationcontainer.navbar-fixed-top > .container {
+	border-top: none;
+}
+
+nav.mainnavigationcontainer.navbar-fixed-top {
+	background: #fff;
+	border-bottom: 1px solid var(--abewo-red);
+}
+
+ul.nav.mainnavigation {
+}
+
+ul.nav.mainnavigation > li {
+	height: var(--nav-height);
+	margin: 0;
+}
+
+ul.nav.mainnavigation li.menu-home img {
+	height: 30px;
+	margin-top: -6px;
+}
+
+ul.nav.mainnavigation > li.active > a:hover,
+ul.nav.mainnavigation > li.active > a {
+	border-bottom: 3px solid var(--abewo-red);
+	background-color: #fff; /*var(--abewo-red);*/
+}
+
+ul.nav.mainnavigation > li > a {
+	height: var(--nav-height);
+	color: var(--abewo-red);
+	border-bottom: 3px solid transparent;
+}
+
+ul.nav.mainnavigation > li > a:hover {
+	border-bottom: 3px solid var(--abewo-red);
+}
+
+/* NEWS */
+div.article {
+	margin-top: 10px;
+	border-bottom: 1px solid var(--abewo-red);
+}
+
+div.article .title {
+	padding-left: 0;
+}
+
+div.article .header h3 {
+	margin-top: 5px;
+}
+
+.header .news-list-date img {
+	width: 19px;
+	margin-top: -6px;
+}
+
+
+
+/* SPECIAL STUFF */
+.nobackgroundnoborder {
+	background: none;
+	border: none;
+}
+
+.nopadding {
+	padding: 0;
+}
+
+.nomargin {
+	margin: 0;
+}
+
+/* FOOTER */
+div.footer .container {
+	/*border: 1px solid var(--abewo-red);*/
+	background-color: #fff;
+	color: var(--abewo-red);
+	font-weight: bold;
+	line-height: 30px;
+}
+
+span.footer.right {
+	float: right;
+}
+
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 767px) {
+	.row.content {
+		height: auto;
+	}
+}
+
+/* abewohousetypes */
+
+div.tx-abewohousetypes div.abewohousetype::first-child {
+	padding-bottom: none;
+}
+
+div.abewohousetype {
+	border-bottom: 1px solid #333;
+	padding-bottom: 15px !important;
+	padding-top: 10px;
+}
+
+div.abewohousetype h3 {
+	text-transform: uppercase;
+	margin-top: 15px;
+	font-size: 30px;
+	border-bottom: 1px solid #ac0000;
+}
+
+div.abewohousetype a.pdflink:hover {
+	text-decoration: none;
+}
+div.abewohousetype div.pdfcontainer {
+	border: 1px solid #ac0000;
+	font-weight: bold;
+}
+div.abewohousetype div.pdfcontainer:hover {
+	/*border-color: #333;*/
+	background-color: #ac0000;
+	color: #fff;
+}
+div.abewohousetype span.pdflogo {
+	background-color: #ac0000;
+	color: white;
+	font-weight: bold;
+	padding: 2px;
+	padding-right: 4px;
+	margin-right: 3px;
+}
+
+div.abewohousetype div.basicData {
+	border-top: 1px solid #ac0000;
+	padding-top: 5px;
+}
+
+div.abewohousetype ul li:before {
+	/*content: "-";*/
+}
+
+/* abewooffer */
+
+div.tx-abewooffers div.abewooffer::first-child {
+	padding-bottom: none;
+}
+
+div.abewooffer {
+	border-bottom: 1px solid #333;
+	padding-bottom: 15px !important;
+	padding-top: 10px;
+}
+
+div.abewooffer h3 {
+	text-transform: uppercase;
+	margin-top: 15px;
+	font-size: 30px;
+	border-bottom: 1px solid #ac0000;
+}
+
+div.abewooffer a.pdflink:hover {
+	text-decoration: none;
+}
+div.abewooffer div.pdfcontainer {
+	border: 1px solid #ac0000;
+	font-weight: bold;
+}
+div.abewooffer div.pdfcontainer:hover {
+	/*border-color: #333;*/
+	background-color: #ac0000;
+	color: #fff;
+}
+div.abewooffer span.pdflogo {
+	background-color: #ac0000;
+	color: white;
+	font-weight: bold;
+	padding: 2px;
+	padding-right: 4px;
+	margin-right: 3px;
+}
+
+div.abewooffer div.basicData {
+	border-top: 1px solid #ac0000;
+	padding-top: 5px;
+}
+
+div.abewooffer ul li:before {
+	/*content: "-";*/
+}

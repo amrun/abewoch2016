@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-08-03T15:09:46Z" product-name="abewohousetypes">
+		<header/>
+		<body>
+			<trans-unit id="tx_abewohousetypes_domain_model_house">
+				<source>House</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_house.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_house.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_house.documentation">
+				<source>Documentation</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_house.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_house.basic_data">
+				<source>Basic Data</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_house.construction">
+				<source>Construction</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_house.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_abewohousetypes_domain_model_category.name">
+				<source>Name</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

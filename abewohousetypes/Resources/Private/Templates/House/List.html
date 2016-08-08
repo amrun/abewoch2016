@@ -1,0 +1,74 @@
+<f:layout name="Default"/>
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+
+	<f:flashMessages/>
+
+	<f:for each="{houses}" as="house">
+		<div class="row abewohousetype">
+
+			<div class="row">
+				<div class="col-md-12">
+					<h3><f:translate key="tx_abewohousetypes_domain_model_house.namePrefix"/>: {house.name}</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<f:format.html>{house.description}</f:format.html>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 basicData">
+							<h4><f:translate key="tx_abewohousetypes_domain_model_house.basicDataTitle"/></h4>
+							<f:format.html>{house.basicData}</f:format.html>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-12">
+							<a href="{house.image.originalResource.publicUrl}" title="{house.image.originalResource.title}" data-rel="lightcase" class="thumbnail img-responsive">
+								<img src="{house.image.originalResource.publicUrl}" />
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<a class="pdflink" href="{house.documentation.originalResource.publicUrl}">
+							<div class="pdfcontainer nopadding">
+								<span class="pdflogo">PDF</span>
+								<f:if condition='{house.documentation.originalResource.description}'>
+									<f:then>
+										{house.documentation.originalResource.description}
+									</f:then>
+									<f:else>
+										<f:translate key="tx_abewohousetypes_domain_model_house.noDocumentation"/>
+									</f:else>
+								</f:if>
+							</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</f:for>
+
+</f:section>

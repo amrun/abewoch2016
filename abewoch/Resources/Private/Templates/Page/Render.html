@@ -1,0 +1,54 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+    <f:layout name="abewochDefault"/>
+
+    <f:section name="Configuration">
+
+        <flux:form id="testform">
+
+            <!-- Input field for Fluid variable 'pageClass' -->
+            <flux:field.input name="settings.pageClass" default="some-css-class"/>
+
+            <!-- Backend layout grid (TYPO3 6.x and greater only) -->
+            <flux:grid>
+                <flux:grid.row>
+                    <flux:grid.column colPos="0" name="Sidebar" style="width: 25%"/>
+                    <flux:grid.column colPos="1" name="Content" style="width: 75%"/>
+                </flux:grid.row>
+            </flux:grid>
+
+        </flux:form>
+
+    </f:section>
+
+    <f:section name="MainNavigation">
+        <nav class="navbar navbar-default hidden-xs mainnavigationcontainer" id="mainnavigationcontainer">
+            <div class="container">
+                <ul class="nav navbar-nav mainnavigation" id="mainnavigation">
+                    <li class="menu-home"><a href="/"><img src="http://abewodevtypo3.dungeonfire.ch/typo3conf/ext/abewoch/Resources/Public/Icons/home.png" /></a></li>
+                    <v:page.menu>
+                        <f:for each="{menu}" as="item">
+                            <li class="{f:if(condition: item.active, then: ' active')}">
+                                <f:link.page pageUid="{item.uid}" title="{item.linktext}">{item.linktext}</f:link.page>
+                            </li>
+                        </f:for>
+                    </v:page.menu>
+                </ul>
+            </div>
+        </nav>
+    </f:section>
+
+    <f:section name="Content">
+        <!-- Render colPos=0 in this section -->
+        <v:content.render column="0"/>
+    </f:section>
+
+    <f:section name="Sidebar">
+        <!-- Render colPos=1 in this section -->
+        <v:content.render column="1"/>
+    </f:section>
+
+</div>

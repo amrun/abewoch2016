@@ -1,0 +1,53 @@
+<f:layout name="abewochDefault"/>
+
+<nav class="navbar navbar-inverse visible-xs">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="img-responsive" src="http://www.abewo.ch/fileadmin/abewoch/images/logo.png" alt="banner"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#">news</a></li>
+                <li class="active"><a href="#">über uns</a></li>
+                <li><a href="#">dienstleistungen</a></li>
+                <li><a href="#">baustellen</a></li>
+                <li><a href="#">aktuelle angebote</a></li>
+                <li><a href="#">typenhäuser</a></li>
+                <li><a href="#">partner</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container banner">
+    <div class="text-center hidden-xs banner"><img class="img-responsive banner" src="http://www.abewo.ch/fileadmin/abewoch/images/banner.png" alt="banner"></div>
+</div>
+
+
+        <f:render section="MainNavigation" />
+
+</nav>
+<div class="container content">
+    <div class="row headerimage">
+        <img src="/typo3conf/ext/abewoch/Resources/Public/plaene-auf-holz3.jpg" />
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 nomargin nopadding" style="padding-bottom: 30px;">
+            <f:render section="Content" />
+        </div>
+    </div>
+</div>
+
+<div class="navbar-fixed-bottom footer">
+    <div class="container">
+        <span class="footer left">© ABEWO GMBH | dorfstrasse 46 | 4612 wangen bei olten</span>
+        <span class="footer right">kontakt | anreise</span>
+    </div>
+</div>
+
