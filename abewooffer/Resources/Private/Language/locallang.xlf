@@ -17,7 +17,7 @@
 				<source>Maplink</source>
 			</trans-unit>
 			<trans-unit id="tx_abewooffer_domain_model_offer.description">
-				<source>Description</source>
+				<source>Beschreibung</source>
 			</trans-unit>
 			<trans-unit id="tx_abewooffer_domain_model_offer.image">
 				<source>Image</source>
@@ -39,6 +39,9 @@
 			</trans-unit>
 			<trans-unit id="tx_abewooffer_domain_model_locality.canton">
 				<source>Canton</source>
+			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.noDocumentation">
+				<source>zur zeit keine dokumentation verfügbar</source>
 			</trans-unit>
 			<trans-unit id="tx_abewooffer_domain_model_offer.noDocumentation">
 				<source>zur zeit keine dokumentation verfügbar</source>

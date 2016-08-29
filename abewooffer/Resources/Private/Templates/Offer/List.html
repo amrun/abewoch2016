@@ -1,5 +1,4 @@
-
-<f:layout name="Default" />
+<f:layout name="Default" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"/>
 
 This Template is responsible for creating a table of domain objects.
 
@@ -13,20 +12,13 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for Offer</h1>
 
 <f:flashMessages />
 
-		tx_abewooffer_domain_model_offer.name"
-		tx_abewooffer_domain_model_offer.street"
-		tx_abewooffer_domain_model_offer.description"
-		tx_abewooffer_domain_model_offer.maplink"
-			{offer : offer}"> {offer.name}
-			{offer : offer}"> {offer.street}
-			{offer : offer}"> {offer.description}
-			{offer : offer}"> {offer.maplink}
-
 	<f:for each="{offers}" as="offer">
+
+		<f:debug>{offer}</f:debug>
+
 		<div class="row abewooffer">
 
 			<div class="row">
@@ -38,7 +30,18 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<div class="row">
 				<div class="col-md-6">
 					<div class="row">
-						<div class="col-md-12">
+						<div class="col-md-10">
+							<h4>das objekt befindet sich an der adresse:</h4>
+							<strong>{offer.street}</br>
+							{offer.city.zip} {offer.city.name}</strong>
+						</div>
+						<div class="col-md-2">
+							<div><a class="maplink" href="{offer.maplink}" target="_blank"><img class="mapimage" src="http://abewodevtypo3.dungeonfire.ch/typo3conf/ext/abewoch/Resources/Public/Icons/map-location.png"/></a></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 description">
+							<h4><f:translate key="tx_abewooffer_domain_model_offer.description"/></h4>
 							<f:format.html>{offer.description}</f:format.html>
 						</div>
 					</div>
@@ -47,19 +50,36 @@ Otherwise your changes will be overwritten the next time you save the extension 
 				<div class="col-md-6">
 					<div class="row">
 						<div class="col-md-12">
-							<a href="{offer.image.originalResource.publicUrl}" title="{offer.image.originalResource.title}" data-rel="lightcase" class="thumbnail img-responsive">
-								<img src="{offer.image.originalResource.publicUrl}" />
-							</a>
+							<f:for each="{offer.image}" as="img" iteration="iterator">
+								<f:if condition="{iterator.isFirst}">
+									<f:then>
+										<v:variable.set name="style1" value="" />
+									</f:then>
+									<f:else>
+										<v:variable.set name="style1" value="display: none;" />
+									</f:else>
+								</f:if>
+
+								<a href="{img.originalResource.publicUrl}" title="{img.originalResource.title}" data-rel="lightcase:myCollection:slideshow{offer.uid}" class="thumbnail img-responsive" style="{style1}">
+									<f:if condition="{iterator.isFirst}">
+										<img src="{img.originalResource.publicUrl}" />
+										<img src="http://abewodevtypo3.dungeonfire.ch/typo3conf/ext/abewoch/Resources/Public/Icons/photo-slideshow.png" class="galleryIcon" style="position: absolute;" />
+									</f:if>
+								</a>
+							</f:for>
+
+
 						</div>
 					</div>
+					<f:debug>{offer.documentation.originalResource}</f:debug>
 					<div class="row">
 						<div class="col-md-12">
-							<a class="pdflink" href="{house.documentation.originalResource.publicUrl}">
+							<a class="pdflink" href="{offer.documentation.originalResource.publicUrl}">
 								<div class="pdfcontainer nopadding">
 									<span class="pdflogo">PDF</span>
-									<f:if condition='{house.documentation.originalResource.description}'>
+									<f:if condition='{offer.documentation.originalResource}'>
 										<f:then>
-											{house.documentation.originalResource.description}
+											{offer.documentation.originalResource.description}
 										</f:then>
 										<f:else>
 											<f:translate key="tx_abewooffer_domain_model_offer.noDocumentation"/>

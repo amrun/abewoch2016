@@ -10,7 +10,7 @@ CREATE TABLE tx_abewooffer_domain_model_offer (
 	street varchar(255) DEFAULT '' NOT NULL,
 	maplink varchar(255) DEFAULT '' NOT NULL,
 	description text NOT NULL,
-	image int(11) unsigned NOT NULL default '0',
+	image varchar(255) NOT NULL default '',
 	documentation int(11) unsigned NOT NULL default '0',
 	city int(11) unsigned DEFAULT '0',
 

@@ -21,6 +21,9 @@
 			<trans-unit id="tx_abewooffer_domain_model_offer.image">
 				<source>Image</source>
 			</trans-unit>
+			<trans-unit id="tx_abewooffer_domain_model_offer.image.addFileReference">
+				<source>Add Imageski</source>
+			</trans-unit>
 			<trans-unit id="tx_abewooffer_domain_model_offer.documentation">
 				<source>Documentation</source>
 			</trans-unit>

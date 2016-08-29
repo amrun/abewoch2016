@@ -38,49 +38,49 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * @var string
      */
     protected $name = '';
-    
+
     /**
      * street
      *
      * @var string
      */
     protected $street = '';
-    
+
     /**
      * description
      *
      * @var string
      */
     protected $description = '';
-    
+
     /**
      * maplink
      *
      * @var string
      */
     protected $maplink = '';
-    
+
     /**
      * image
      *
-     * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
-    protected $image = null;
-    
+    protected $image;
+
     /**
      * documentation
      *
      * @var \TYPO3\CMS\Extbase\Domain\Model\FileReference
      */
     protected $documentation = null;
-    
+
     /**
      * city
      *
      * @var \Abewoch\Abewooffer\Domain\Model\Locality
      */
     protected $city = null;
-    
+
     /**
      * Returns the name
      *
@@ -90,7 +90,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->name;
     }
-    
+
     /**
      * Sets the name
      *
@@ -101,7 +101,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->name = $name;
     }
-    
+
     /**
      * Returns the street
      *
@@ -111,7 +111,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->street;
     }
-    
+
     /**
      * Sets the street
      *
@@ -122,7 +122,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->street = $street;
     }
-    
+
     /**
      * Returns the description
      *
@@ -132,7 +132,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->description;
     }
-    
+
     /**
      * Sets the description
      *
@@ -143,7 +143,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->description = $description;
     }
-    
+
     /**
      * Returns the maplink
      *
@@ -153,7 +153,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->maplink;
     }
-    
+
     /**
      * Sets the maplink
      *
@@ -164,7 +164,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->maplink = $maplink;
     }
-    
+
     /**
      * Returns the city
      *
@@ -174,7 +174,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->city;
     }
-    
+
     /**
      * Sets the city
      *
@@ -185,28 +185,26 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         $this->city = $city;
     }
-    
+
     /**
      * Returns the image
      *
-     * @return \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $image
      */
-    public function getImage()
-    {
+    public function getImage() {
         return $this->image;
     }
-    
+
     /**
      * Sets the image
      *
-     * @param \TYPO3\CMS\Extbase\Domain\Model\FileReference $image
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference> $image
      * @return void
      */
-    public function setImage(\TYPO3\CMS\Extbase\Domain\Model\FileReference $image)
-    {
+    public function setImage($image) {
         $this->image = $image;
     }
-    
+
     /**
      * Returns the documentation
      *
@@ -216,7 +214,7 @@ class Offer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     {
         return $this->documentation;
     }
-    
+
     /**
      * Sets the documentation
      *
