@@ -43,7 +43,7 @@ h2 {
 	color: #333;
 	/*background-color: #e9e9e9;*/
 	padding: 10px 10px 3px 10px;
-	border-bottom: 1px solid #ac0000;
+	border-bottom: 1px solid var(--abewo-red);
 }
 
 h3 {
@@ -233,23 +233,23 @@ div.abewohousetype h3 {
 	text-transform: uppercase;
 	margin-top: 15px;
 	font-size: 30px;
-	border-bottom: 1px solid #ac0000;
+	border-bottom: 1px solid var(--abewo-red);
 }
 
 div.abewohousetype a.pdflink:hover {
 	text-decoration: none;
 }
 div.abewohousetype div.pdfcontainer {
-	border: 1px solid #ac0000;
+	border: 1px solid var(--abewo-red);
 	font-weight: bold;
 }
 div.abewohousetype div.pdfcontainer:hover {
 	/*border-color: #333;*/
-	background-color: #ac0000;
+	background-color: var(--abewo-red);
 	color: #fff;
 }
 div.abewohousetype span.pdflogo {
-	background-color: #ac0000;
+	background-color: var(--abewo-red);
 	color: white;
 	font-weight: bold;
 	padding: 2px;
@@ -258,7 +258,7 @@ div.abewohousetype span.pdflogo {
 }
 
 div.abewohousetype div.basicData {
-	border-top: 1px solid #ac0000;
+	border-top: 1px solid var(--abewo-red);
 	padding-top: 5px;
 }
 
@@ -267,6 +267,17 @@ div.abewohousetype ul li:before {
 }
 
 /* abewooffer */
+
+img.galleryIcon {
+	position: absolute;
+	bottom: 45px;
+	margin-left: 19px;
+	width: 45px;
+}
+
+#lightcase-sequenceInfo {
+	font-size: 15px;
+}
 
 div.tx-abewooffers div.abewooffer::first-child {
 	padding-bottom: none;
@@ -282,23 +293,23 @@ div.abewooffer h3 {
 	text-transform: uppercase;
 	margin-top: 15px;
 	font-size: 30px;
-	border-bottom: 1px solid #ac0000;
+	border-bottom: 1px solid var(--abewo-red);
 }
 
 div.abewooffer a.pdflink:hover {
 	text-decoration: none;
 }
 div.abewooffer div.pdfcontainer {
-	border: 1px solid #ac0000;
+	border: 1px solid var(--abewo-red);
 	font-weight: bold;
 }
 div.abewooffer div.pdfcontainer:hover {
 	/*border-color: #333;*/
-	background-color: #ac0000;
+	background-color: var(--abewo-red);
 	color: #fff;
 }
 div.abewooffer span.pdflogo {
-	background-color: #ac0000;
+	background-color: var(--abewo-red);
 	color: white;
 	font-weight: bold;
 	padding: 2px;
@@ -307,10 +318,28 @@ div.abewooffer span.pdflogo {
 }
 
 div.abewooffer div.basicData {
-	border-top: 1px solid #ac0000;
+	border-top: 1px solid var(--abewo-red);
 	padding-top: 5px;
 }
 
 div.abewooffer ul li:before {
 	/*content: "-";*/
 }
+
+div.abewooffer a.maplink {
+
+}
+
+div.abewooffer img.mapimage {
+	height: 50px;
+	margin-top: 27px;
+}
+
+div.abewooffer div.description {
+	border-top: 1px solid var(--abewo-red);
+	padding-top: 5px;
+	margin-top: 10px;
+}
+
+/* contactform */
+#success_message{ display: none;}
