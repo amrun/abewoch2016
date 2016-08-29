@@ -64,4 +64,20 @@ plugin.tx_vhs.settings.asset {
     	path = EXT:abewoch/Resources/Public/bootstrap-3.3.6-dist/js/bootstrap.js
     }
 
+
 }
+
+
+
+    [globalVar = TSFE:id=11]
+    plugin.tx_vhs.settings.asset {
+		contactFormJS {
+			name = contactFormJS
+			path = EXT:abewoch/Resources/Public/JS/contactform.js
+		}
+		contactFormValidatorJS {
+			name = contactFormValidatorJS
+			path = EXT:abewoch/Resources/Public/JS/bootstrapValidator.min.js
+		}
+    }
+    [global]
